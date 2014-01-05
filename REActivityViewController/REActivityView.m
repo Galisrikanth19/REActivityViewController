@@ -43,12 +43,12 @@
         self.clipsToBounds = YES;
         _activities = activities;
         
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-            _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, (IS_IPHONE_5)? 517 :417)];
-            _backgroundImageView.image = [UIImage imageNamed:@"REActivityViewController.bundle/Background"];
-            _backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            [self addSubview:_backgroundImageView];
-        }
+//        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+//            _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, (IS_IPHONE_5)? 517 :417)];
+//            _backgroundImageView.image = [UIImage imageNamed:@"REActivityViewController.bundle/Background"];
+//            _backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//            [self addSubview:_backgroundImageView];
+//        }
     
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 39, frame.size.width, self.frame.size.height - 104)];
         _scrollView.showsHorizontalScrollIndicator = NO;
@@ -101,9 +101,9 @@
         [_cancelButton setBackgroundImage:[[UIImage imageNamed:@"REActivityViewController.bundle/Button"] stretchableImageWithLeftCapWidth:22 topCapHeight:47] forState:UIControlStateNormal];
         _cancelButton.frame = CGRectMake(22, 352, 276, 47);
         [_cancelButton setTitle:NSLocalizedStringFromTable(@"button.cancel", @"REActivityViewController", @"Cancel") forState:UIControlStateNormal];
-        [_cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_cancelButton setTitleShadowColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4] forState:UIControlStateNormal];
-        [_cancelButton.titleLabel setShadowOffset:CGSizeMake(0, -1)];
+        [_cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//        [_cancelButton setTitleShadowColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4] forState:UIControlStateNormal];
+//        [_cancelButton.titleLabel setShadowOffset:CGSizeMake(0, -1)];
         [_cancelButton.titleLabel setFont:[UIFont boldSystemFontOfSize:19]];
         [_cancelButton addTarget:self action:@selector(cancelButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_cancelButton];
@@ -126,9 +126,9 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 59, 80, 30)];
     label.textAlignment = UITextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
-    label.shadowOffset = CGSizeMake(0, 1);
+    label.textColor = [UIColor blackColor];
+//    label.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75];
+//    label.shadowOffset = CGSizeMake(0, 1);
     label.text = activity.title;
     label.font = [UIFont boldSystemFontOfSize:12];
     label.numberOfLines = 0;
